@@ -1,0 +1,592 @@
+:root{
+    --colorLyrics:rgba(53,58,64,1);
+    --linksColor: rgba(149, 147, 145,1);
+    --green:rgba(36,150,60,1);
+    --softgreen:rgba(150,201,62,255);
+}
+
+
+
+/* Navegador */
+
+.navigator{
+    background: var(--colorLyrics);
+    display: flex  ;
+    flex-flow: column wrap;
+    justify-content: space-between;    
+}
+
+
+.logo{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:center;
+    align-content: center;
+}
+    .logo-text{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: white;
+        font-size: 1.rem;
+    }
+    .logo-logo{
+        max-width: 8rem;
+        max-height: 16rem;
+    }
+        .logo-logo:hover{
+            transform: scale(1.3) ;
+            transition: ease-out .5s;
+        }
+
+.links{
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    font-size: large;
+}
+
+a{  
+    color:rgba(149, 147, 145,1);
+    text-decoration: none;
+}
+    a.verde{
+        color:var(--green);
+    }
+
+a:hover{
+    color: white;
+}
+
+
+@media (max-width:880px){
+
+    div.show{
+        display:none;
+    }
+
+
+    .navigator{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .burger{
+        display: flex;
+        flex-direction: row;
+    }
+
+    div.logo{
+        display: flex;
+        flex-flow: row;
+        justify-content: space-evenly;
+        width: 80%;
+    }
+
+    div.links{
+        flex-direction: column;
+        padding-right: 2rem ;
+        width: 100%;
+
+    }
+    
+    .links a{
+        padding-bottom: 1rem;
+        width: 100%;
+        text-align: right;
+        margin-right: 2rem;
+        font-size: large;
+    }
+}
+
+
+@media (max-width:500px) 
+{
+    .links a{
+        padding-bottom: 1rem;
+        width: 100%;
+        text-align: center;
+        margin-right: 2rem;
+    }
+   
+}
+
+
+.icon {
+    display: none;
+}
+
+/* Media cambio sobre una pantalla menor Navegador */
+
+@media (max-width:880px) {
+  
+
+    .burger{
+        display: flex;
+        justify-content: center;  
+        align-content: center;  
+    }
+    
+    
+    .menu-btn{
+        display: flex;
+        align-items: center;
+        width: auto;
+        height: auto;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+    
+    
+    }
+    
+    .menu-btn_burger{
+        width: 1.5rem;
+        height: .2rem;
+        background: var(--linksColor);
+        border-radius:5px ;
+        box-shadow: 0 2px 5px var(--colorLyrics);
+        transition: all .5s ease-in-out;
+    }
+    
+    .menu-btn_burger::after,
+    
+    .menu-btn_burger::before {
+        content: " ";
+        position: absolute;
+        display: flex;
+        width: 1.5rem;
+        height: .2rem;
+        background: var(--linksColor);
+        border-radius:5px ;
+        box-shadow: 0 2px 5px var(--colorLyrics);
+        transition: all .5s ease-in-out;
+    }
+    
+    .menu-btn_burger::before{
+        transform: translateY(-15px);
+    
+    }
+    .menu-btn_burger::after{
+        transform: translateY(15px);
+    }
+    
+    /* animación */
+    
+    .menu-btn.open .menu-btn_burger{
+        transform: translateX(-50px);
+        background: transparent;
+        box-shadow: none;
+    }
+    
+        .menu-btn.open .menu-btn_burger::before {
+            transform: rotate(45deg) translate(35px,-35px);
+        }
+        .menu-btn.open .menu-btn_burger::after {
+            transform: rotate(-45deg) translate(35px,35px);
+        }
+    }
+    
+
+
+
+
+
+
+
+/* Tickets - fotos */
+
+
+
+.comprar-tickets{
+    position: relative;
+    display: block;
+    background-color:var(--colorLyrics) ;
+}
+
+.palacio{
+    opacity: 40%;
+}
+
+.texto{
+    color: white;
+    text-align: right;
+    font-size: 1.7vw;
+    flex-flow: column wrap;
+    margin-right: 8vh;
+    position: absolute;
+    top: 30%;
+    bottom: 15%;
+    left: 30%;
+}
+.boton-ticket{
+    display: flex;
+    flex-flow: row ;
+    justify-content: flex-end;
+}
+
+@media (max-width:800px) {
+
+    #conferencia{
+        width: 100%;
+        height: 100%;
+        padding: 4px;
+    }
+    .texto{
+        /* display: fixed; */
+        text-align: left;
+        font-size: medium;
+        flex-flow: column ;
+        position:absolute;
+        top: 0;
+        left: 0;
+        bottom: 0%;
+        margin: 5px;
+        padding: 5px;
+        overflow-x: scroll;
+    }
+    
+    .boton-ticket{
+        justify-content: center;
+    }
+}
+
+@media (max-width:450px){
+    .boton-ticket{
+        display: none;
+    }
+}
+
+/* Botones */
+
+.boton{
+    padding-left: 1.5vh;
+    padding-right: 1.5vh;
+    padding-top:1vh ;
+    padding-bottom:1vh ;
+
+    margin-left: 1.5vh ;
+    font-size: large;
+    background: none;
+    border-radius: .7vw;
+    color: white;
+    border: 1px solid white;
+}
+    button.tickets{
+        background-color: rgba(36,150,60,1);
+    }
+
+
+
+
+/* oradores */
+
+#box-moderador{
+    height: 40rem;
+    margin-bottom: 1rem ;
+}
+
+.oradores-tag{
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+}
+
+section p{
+    color:var(--linksColor);
+}
+
+
+
+.contenedor-tarjetas{
+    box-sizing:border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    padding-left: 17%;
+    padding-right: 17%;
+}
+
+.tarjeta-orador{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgrey;
+    border-radius: 50% 50% 0.3rem .3rem;
+    width: auto;
+    max-width: 25;
+    margin: 0 1rem 0 1rem;
+}
+
+
+
+.picture{
+    display: flex;
+    width: auto;
+    height: 50%;
+}
+    .photo{
+        width: 100%;
+        border-radius: .3rem .3rem 0 0;
+    }
+
+    .photo:hover{
+
+        border-radius: 50% 50% 0 0;
+    }
+
+.texto-orador{
+    display: flex;
+    flex-direction: column ;
+    padding-top: 1rem;
+    height: 100%;
+    margin: .5rem .5rem 0rem .5rem;
+    text-align: left;
+    font-size: .8rem;
+    overflow:scroll;
+}
+
+.botones-orador{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+    .boton1,.boton2,.boton3,.boton4{
+        display: flex;
+        border-radius: 3px; 
+        border: none;
+        font-size: .6rem;
+        font-weight: bold;
+        padding: 3px;
+        margin-right: 5px;
+    }
+    .boton1{
+        background:	rgb(240, 219, 79) ;
+    }
+    .boton2{
+        background: rgb(97, 219, 251);
+        color: white;
+    }
+    .boton3{
+        background: rgb(114,123,131);
+        color: white;
+    }
+    .boton4{
+        background: rgb(219,53,70);
+        color: white;
+    }
+
+@media (max-width:900px) {
+    #box-moderador{
+        height: max-content;
+
+    }
+    .contenedor-tarjetas{
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .tarjeta-orador{
+        flex-direction: row;
+        margin-bottom: 1rem;
+        border-radius: 0.3rem ;
+        ;
+    }
+    .photo{
+        width: 180px;
+        border-radius: .3rem 0 0 .3rem ;
+    }
+
+
+       .photo:hover{
+        border-radius:.3rem 50% 50% .3rem;
+    }
+
+    .texto-orador{
+        padding: .5rem .5rem 0rem 1rem;
+        text-align: justify;
+        font-size: .8rem;
+        overflow:scroll;
+    }
+
+}
+
+@media (max-width:500px) {
+    .tarjeta-orador{
+        display: flex;
+        border:none;
+        flex-direction: column;
+        width: auto;
+        max-width: 25;
+        margin: 0 1rem 0 1rem;
+    }
+
+    .photo{
+        width: 100%;
+    }
+}
+
+
+
+/* Octubre */
+
+.images-Octubre{
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+#img{
+    display: flex;
+    width: 50%;
+    overflow: hidden;
+}
+
+#img>img{
+        display: flex;
+        width:100%;
+        animation: modusSlide 5s linear;
+    }
+
+
+
+ @keyframes modusSlide{
+        0%{transform: scale(1.2);}
+        10%{transform: scale(1);}
+        100%{transform: scale(1);}
+    }
+ 
+
+
+    .texto-octubre{
+        color: white;
+        background-color: var(--colorLyrics);
+        display: inline-block;
+        font-size: medium;
+        padding: 1rem;
+        width: 50%;
+    }
+
+
+    .boton-conoce{
+        font-size: 1rem;
+        background: none;
+        border-radius: 4px;
+        color: white;
+        border: 1px solid white;
+    }
+
+@media (max-width:770px) {
+    .images-Octubre{
+        flex-direction: column;
+    }
+    #img{
+        width: 100%;
+    }
+    .texto-octubre{
+        width: 100%;
+        font-size: 1rem;
+    }
+}
+
+
+
+
+/* Fomulario */
+.ser-orador{
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    max-height: auto;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    max-height: fit-content;
+}
+
+@media (max-width:700px) {
+form{
+    width: 90%;
+}
+    
+}
+
+.nombres-orador{
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+    .name{
+        border: 1px solid lightgrey;
+        border-radius: 5px;
+        width: 48%;
+        font-size: .9rem;
+        margin-top: .5rem;
+        padding: .5rem;
+    }
+
+.texto-cabecera{
+    text-align: center;
+    font-size: .8rem;
+}
+.text-area{
+    margin-top: 1rem;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+
+}
+.texto-light{
+    font-size: .8rem;
+    color: gray;
+}
+
+.boton-enviar{
+    background: var(--softgreen) ;
+    border: none;
+    border-radius: 5px;
+    padding: .5rem;
+    color: white;
+
+}
+
+/* Footer*/
+
+footer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    padding: 0 5rem 0 5rem;
+    align-items: center;
+    
+    border: none;
+    height: auto;
+    color: white;
+    font-size: small;
+
+    justify-content: space-evenly;
+
+
+    background: rgb(9,9,121);
+    background: linear-gradient(90deg, rgba(27,55,67,1) 0%, rgba(31,82,113,1) 100%);
+}
+
+    .foot{
+        padding: 10px;
+    }
+
+@media (max-width:880px){
+    footer{
+
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        font-size: large;
+    }
+}
+
+
+

@@ -1,0 +1,159 @@
+<!--DETERMINA QUE HTML ES HTML5-->
+<!DOCTYPE html>
+<!--LENGUAJE ES = ESPAÑOL-->
+<html lang="ES">
+<!--DATOS PARA EL NAVEGAR CON INFO DE LA PAGINA WEB-->
+<head>
+    <title>CODO A CODO</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatiblre" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="EstiloATR.css">
+    <link rel="shortcut icon" href="IMGTP\codoacodo.png" type="image/x-icon">
+</head>
+
+<body>
+  <div class="container-fluid navigator">
+      <div class="row burger">
+           <div class="col-sm-4 logo ">
+              <img src="IMGTP\codoacodo.png" class="logo-logo">
+              <h2 class="logo-text">Conf Bs As</h2>
+          </div>
+          
+          <div class="menu-btn icon">
+              <div class="menu-btn_burger"></div>
+          </div>
+
+          <div class="col-sm-8 links show">
+
+              <a href="#conferencia">La conferencia</a>
+              <a href="#oradores">Los oradores</a>
+              <a href="#img">El lugar y la fecha</a>
+              <a href="#convertir-orador">Conviértete en orador</a>
+              <a class="verde">Comprar tickets</a>
+          </div>
+
+      </div>
+  </div>
+
+
+
+<div id="conferencia" class="container-fliud comprar-tickets">
+       <img class="img-fluid palacio" src="IMGTP\ba1.jpg">
+      <div class="texto">
+              <h2>Conf Bs As</h2>
+              <p>Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad del conocimiento y experiencia de los expertos que están creando el futuro de Internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores del primer nivel que tenemos para ti. Te esperamos!</p>
+              <div class="boton-ticket">
+              <button class="boton orador">Quiero ser orador</button>
+              <button class="boton tickets">Comprar tickets</button>
+              </div>
+      </div>
+</div>
+
+
+<div id="box-moderador">
+<section id="oradores" class="oradores-tag">
+  <br>
+  <p>CONOCE A LOS</p>
+  <h2>ORADORES</h2>
+</section>
+
+<section class="contenedor-tarjetas">
+  <div class="tarjeta-orador">
+      <div class="picture">
+          <img class="photo" src="IMGTP\steve.jpg">
+      </div>
+      <div class="texto-orador">
+          <div class="botones-orador">
+              <button class="boton1">JavaScript</button>
+              <button class="boton2">React</button>
+          </div>
+  
+          <label>Steve Jobs</label>
+          <br>
+          <p class="para-orador">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione exercitationem repellendus magnam a voluptas tempora, quod voluptate cum inventore neque?</p>
+      </div>
+  </div>
+
+  <div class="tarjeta-orador">
+      <div class="picture">
+          <img class="photo" src="IMGTP\bill.jpg">
+      </div>
+      <div class="texto-orador">
+          <div class="botones-orador">
+              <button class="boton1">JavaScript</button>
+              <button class="boton2">React</button>
+          </div>
+  
+          <label>Bill Gates</label>
+          <br>
+          <p class="para-orador">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione exercitationem repellendus magnam a voluptas tempora, quod voluptate cum inventore neque?</p>
+      </div>
+  </div>
+
+  <div class="tarjeta-orador">
+      <div class="picture">
+          <img class="photo" src="IMGTP\ada.jpeg">
+      </div>
+      <div class="texto-orador">
+          <div class="botones-orador">
+              <button class="boton3">Negocios</button>
+              <button class="boton4">Start-ups</button>
+          </div>
+  
+          <label>Ada Lovelace</label>
+          <br>
+          <p class="para-orador">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione exercitationem repellendus magnam a voluptas tempora, quod voluptate cum inventore neque?</p>
+      </div>
+  </div>
+
+</section>
+</div>
+
+<div class="images-Octubre">
+  <div id="img">
+      <img src="IMGTP\honolulu.jpg">
+  </div>
+
+  <div class="texto-octubre">
+      <h3>Bs As - Octubre</h3>
+      <p>Buenos Aires es la provincia y localidad más grande del estado de Argentina, en los Estados Unidos. Honolulu es la más sureña de entre las principales ciudades estadounidenses. Aunque el nombre de Honolulu se refiere al área urbana en la costa sureste de la isla de Oahu, la ciudad y el condado de Honolulu han formado una ciudad-condado consolidada que cubre toda la ciudad (aproximadamente 600km<sup>2</sup> de superficie).</p>
+      <button class="boton-conoce">Conocé más</button>
+  </div>
+</div>
+
+
+<div class="ser-orador" id="convertir-orador">
+  <form class="formulario">
+      <div class="texto-cabecera"> 
+      <p>CONVIÉRTETE EN UN</p> 
+      <h2>ORADOR</h2>
+      <label class="texto-dark"> Anótate como orador para dar una charla ignite. Cuéntanos de qué quieres hablar!</label>
+      </div> 
+      
+      <div class="nombres-orador">
+          <input class="name" type="text" placeholder="Nombre">
+          <input class="name" type="text" placeholder="Apellido">
+      </div>
+
+      <textarea class="text-area" id="" cols="30" rows="8" placeholder="Sobre qué quieres hablar?"></textarea>
+      <label class="texto-light"> Recuerda incluir un título para tu charla</label>
+      <button class="boton-enviar">Enviar</button>
+  </form>
+</div>
+
+
+<footer>
+      <div class="foot">Preguntas frecuentes</div>
+      <div class="foot">Contáctanos</div>
+      <div class="foot">Prensa</div>
+      <div class="foot">Conferencias</div>
+      <div class="foot">Términos y condiciones</div>
+      <div class="foot">Privacidad</div>
+      <div class="foot">Estudiantes</div>
+</footer>
+<script src="Javita.js"></script>
+</body>
+</html>
+
